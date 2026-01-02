@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rıza Sabuncu</title>
+  <title>Rıza Sabuncu - Offensive Security Engineer</title>
+  <meta name="description" content="Rıza Sabuncu - Offensive Security Engineer based in Istanbul. Security enthusiast, Apple pwner, and retired developer.">
+  <meta name="author" content="Rıza Sabuncu">
+  <meta name="keywords" content="offensive security, cybersecurity, ethical hacking, penetration testing">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rıza Sabuncu - Offensive Security Engineer">
+  <meta property="og:description" content="Offensive Security Engineer based in Istanbul. Security enthusiast and Apple pwner.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/2565849?v=4">
+  <meta property="og:url" content="https://rizasabuncu.com">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rizasabuncu">
+  <meta name="twitter:creator" content="@rizasabuncu">
+  <meta name="twitter:title" content="Rıza Sabuncu - Offensive Security Engineer">
+  <meta name="twitter:description" content="Offensive Security Engineer based in Istanbul. Security enthusiast and Apple pwner.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/2565849?v=4">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rizasabuncu.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,7 +41,9 @@
     <div class="socials">
       <a href="https://github.com/riza" target="_blank" rel="noopener">github</a>
       <a href="https://linkedin.com/in/rizasabuncu" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://twitter.com/rizasabuncu" target="_blank" rel="noopener">twitter</a>
+      <a href="https://x.com/rizasabuncu" target="_blank" rel="noopener">x</a>
+      <a href="https://soundcloud.com/rizasabuncu" target="_blank" rel="noopener">soundcloud</a>
+      <a href="https://www.youtube.com/watch?v=NhIGWG-wMDo" target="_blank" rel="noopener">youtube</a>
     </div>
 
     <p class="footer"><span class="year">© 2024</span><span class="blink">_</span></p>
@@ -48,6 +71,76 @@
         rotateEl.style.opacity = '1';
       }, 150);
     }, 1500);
+
+    // Console Matrix Animation
+    const width = 40;
+    const height = 20;
+    let chars = [];
+    const symbols = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+
+    function initMatrix() {
+      chars = [];
+      for (let i = 0; i < height; i++) {
+        chars[i] = [];
+        for (let j = 0; j < width; j++) {
+          chars[i][j] = ' ';
+        }
+      }
+    }
+
+    function updateMatrix() {
+      for (let i = height - 1; i > 0; i--) {
+        chars[i] = [...chars[i - 1]];
+      }
+      for (let j = 0; j < width; j++) {
+        if (Math.random() > 0.85) {
+          chars[0][j] = symbols[Math.floor(Math.random() * symbols.length)];
+        } else {
+          chars[0][j] = ' ';
+        }
+      }
+    }
+
+    function renderMatrix() {
+      console.clear();
+      let output = '';
+      for (let i = 0; i < height; i++) {
+        output += chars[i].join('') + '\n';
+      }
+      console.log('%c' + output, 'color: #0f0; font-family: monospace; font-size: 12px; line-height: 1;');
+    }
+
+    let frame = 0;
+    const totalFrames = 80;
+
+    initMatrix();
+    const matrixInterval = setInterval(() => {
+      updateMatrix();
+      renderMatrix();
+      frame++;
+      if (frame >= totalFrames) {
+        clearInterval(matrixInterval);
+        console.clear();
+        console.log(
+          '%c\n' +
+          '                      ▄▄                        ▄▄ \n' +
+          '                     ██                      █▄ ██ \n' +
+          '                    ▄██▄            ▄        ██ ██ \n' +
+          ' ██ ██ ▄███▄ ██ ██   ██ ▄███▄ ██ ██ ████▄ ▄████ ██ \n' +
+          ' ██▄██ ██ ██ ██ ██   ██ ██ ██ ██ ██ ██ ██ ██ ██    \n' +
+          '  ▀██▀▄▀███▀▄▀██▀█  ▄██▄▀███▀▄▀██▀█▄██ ▀█▄█▀███ ██ \n' +
+          '   ██                ██                            \n' +
+          ' ▀▀▀                ▀▀                             \n\n' +
+          '%cCurious minds find the hidden things.\n\n' +
+          '%cLet\'s connect: https://x.com/rizasabuncu\n' +
+          '%cOr play this: https://www.youtube.com/watch?v=NhIGWG-wMDo',
+          'color: #0f0; font-family: monospace; font-size: 14px; font-weight: bold;',
+          'color: #ff0; font-family: monospace; font-size: 16px; font-weight: bold; text-shadow: 0 0 10px #ff0;',
+          'color: #fff; font-family: monospace; font-size: 12px;',
+          'color: #f00; font-family: monospace; font-size: 12px;'
+        );
+      }
+    }, 50);
   </script>
 </body>
 </html>
