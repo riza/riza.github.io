@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0b;
+  --text: #e4e4e7;
+  --text-dim: #71717a;
+  --green: #22c55e;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.prompt {
+  color: var(--green);
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: var(--green);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.tagline .rotate {
+  color: var(--text);
+  transition: opacity 0.15s ease;
+}
+
+.tagline .cursor {
+  color: var(--green);
+  animation: blink 0.8s step-end infinite;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.socials a {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  transition: color 0.15s;
+}
+
+.socials a:hover {
+  color: var(--green);
+}
+
+.footer {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+}
+
+.blink {
+  color: var(--green);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .socials {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

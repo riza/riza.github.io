@@ -1,0 +1,417 @@
+<!-- saved from url=(0024)https://rizasabuncu.com/ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rıza Sabuncu - Offensive Security Engineer  at Izmir, Turkey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Rıza Sabuncu - Offensive Security Engineer at Izmir, Turkey">
+<meta name="keywords" content="Rıza Sabuncu, Back-end, Software, Golang, Developer, Infosec">
+<meta name="author" content="© 2018 B.C.Rikko">
+<meta name="theme-color" content="#212529">
+<link rel="shortcut icon" type="image/png" href="https://rizasabuncu.com/favicon.png">
+<link rel="shortcut icon" sizes="196x196" href="https://rizasabuncu.com/favicon.png">
+<link rel="apple-touch-icon" href="https://rizasabuncu.com/favicon.png">
+<link href="style.css" rel="stylesheet">
+<link href="nes.min.css" rel="stylesheet">
+<style>
+         @charset "utf-8";
+         @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+         body {
+         padding: 0 2rem;
+         margin: 0 2rem;
+         }
+         #nescss > .container {
+         max-width: 980px;
+         margin: 0 auto;
+         margin-top: 150px;
+         }
+         /* Header */
+         header {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: 9;
+         border-bottom: 4px solid #D3D3D3;
+         background-color: white;
+         }
+         header > .container {
+         display: flex;
+         align-items: baseline;
+         max-width: 980px;
+         margin: 0 auto;
+         padding-top: 1rem;
+         transition: all 0.2s ease;
+         }
+         header > .container > .nav-brand {
+         margin-right: auto;
+         }
+         header > .container > .social-button {
+         margin-left: auto;
+         }
+         .nav-brand .brand-logo {
+         margin-right: 1rem;
+         }
+         .nav-brand > a {
+         color: #212529;
+         text-decoration: none;
+         }
+         .social-buttons p {
+         margin-bottom: 0;
+         }
+         /* Header-sticky */
+         header.sticky > .container {
+         font-size: 0.8rem;
+         padding: 0;
+         align-items: center;
+         }
+         header.sticky .nav-brand h1 {
+         margin: 0;
+         }
+         header.sticky .nav-brand p {
+         display: none;
+         margin-bottom: 0;
+         font-size: 0.6rem;
+         }
+         /* Main */
+         .main-content {
+         margin-bottom: 4rem;
+         }
+         /* Footer */
+         footer {
+         text-align: center;
+         margin-bottom: 2rem;
+         }
+         footer a {
+         color: #333;
+         text-decoration: none;
+         }
+         h2 > a {
+         margin-right: 1rem;
+         }
+         .topic {
+         margin-bottom: 3rem;
+         }
+         /* github link */
+         .github-link {
+         position: fixed;
+         top: 100px;
+         right: -240px;
+         z-index: 999;
+         display: flex;
+         height: 100px;
+         color: #333;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         }
+         .github-link.active {
+         right: 10px;
+         }
+         .github-link:hover {
+         text-decoration: none;
+         }
+         .github-link > p.nes-balloon {
+         align-self: flex-start;
+         padding: 0.2rem 0.5rem;
+         font-size: 0.8rem;
+         color: #333;
+         }
+         .github-link > i.nes-octocat {
+         align-self: flex-end;
+         }
+         /* Showcase */
+         section.showcase {
+         margin-top: 2.5rem;
+         }
+         section.showcase > section.nes-container {
+         padding-bottom: 2.5rem;
+         }
+         section.showcase > section.nes-container,
+         section.showcase > section.samplecode {
+         position: relative;
+         }
+         .nes-btn.showcode {
+         position: absolute;
+         font-size: 12px;
+         bottom: 0px;
+         right: -4px;
+         }
+         .nes-btn.copycode {
+         position: absolute;
+         font-size: 12px;
+         top: 0;
+         right: 0px;
+         }
+         section.showcase > section.samplecode > pre code {
+         font-size: 13px;
+         line-height: 1.5;
+         padding: 1.5rem;
+         }
+         .item {
+         margin-bottom: -1rem;
+         }
+         .item > * {
+         margin-bottom: 1.5rem !important;
+         }
+         /* Containers */
+         .item.containers > .nes-container {
+         display: inline-block;
+         max-width: 400px;
+         }
+         /* Balloons sample */
+         section.message-list {
+         display: flex;
+         flex-direction: column;
+         }
+         .message-list > .message {
+         display: flex;
+         margin-top: 2rem;
+         }
+         .message-list > .message > .nes-balloon {
+         max-width: 550px;
+         }
+         .message-list > .message i {
+         align-self: flex-end;
+         }
+         .message-list > .message.-left {
+         align-self: flex-start;
+         }
+         .message-list > .message.-right {
+         align-self: flex-end;
+         }
+         .message-list > .message.-left i {
+         margin-right: 2rem;
+         }
+         .message-list > .message.-right i {
+         margin-left: 2rem;
+         }
+         .icon-list > .blur-filter {
+         filter: blur(10px);
+         }
+         /* Copied balloon */
+         .nes-balloon.copied-balloon {
+         position: absolute;
+         display: none;
+         padding: 1rem;
+         box-shadow: 0 5px 20px 5px rgba(0,0,0,.6);
+         z-index: 1;
+         }
+         /* Topic */
+         h3.topic-title {
+         display: flex;
+         align-items: center;
+         margin-bottom: 1rem;
+         }
+         h3.topic-title > i {
+         margin-right: 1.5rem;
+         }
+         /* coreteam */
+         .coreteam-members {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         }
+         .nes-container.member-card {
+         display: flex;
+         padding: 1rem 1.5rem;
+         width: 470px;
+         margin-bottom: 2rem;
+         }
+         .member-card .avatar > img {
+         display: block;
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         }
+         .member-card > .profile {
+         margin-left: 1.5rem;
+         }
+         .member-card > .profile > .name {
+         font-size: 20px;
+         }
+         /* Contributors */
+         .contributor {
+         display: inline-block;
+         margin: 1rem;
+         text-align: center;
+         width: 160px;
+         }
+         .contributor > p {
+         margin: .5rem;
+         font-size: 12px;
+         }
+         .contributor img.nes-avatar {
+         transition: all .4s;
+         display: inline-block;
+         }
+         .contributor:hover {
+         text-decoration: none;
+         opacity: 0.7;
+         }
+         .nes-container.is-dark > .title a {
+         color:#fff;
+         text-decoration:none;
+         }
+         .nes-container > .title a {
+         color:#333;
+         text-decoration:none;
+         }
+         /* Articles */
+         .article-link > .title a {
+         color: #333;
+         }
+         .article-link > .title span {
+         margin-left: 1rem;
+         }
+         /* Scroll back to top */
+         .scroll-btn {
+         position: fixed;
+         bottom: -60px;
+         right: 2rem;
+         box-shadow: 0 5px 20px rgba(0,0,0,.6);
+         transition: all 0.3s ease;
+         }
+         .scroll-btn.active {
+         bottom: 25px;
+         }
+         .scroll-btn > span {
+         display: block;
+         transform: rotateZ(90deg);
+         }
+         img.lazy {
+         background-color: #D3D3D3;
+         }
+         @media screen and (max-width: calc(980px - 4rem)) {
+         header > .container {
+         margin: 0 4rem;
+         }
+         }
+         @media screen and (max-width: 768px) {
+         body {
+         margin: 2rem 0.5rem;
+         padding: 0;
+         }
+         header > .container {
+         margin: 0 0.5rem;
+         }
+         .github-link {
+         display: none;
+         }
+         .message-list > .message > .nes-balloon {
+         max-width: 60%;
+         }
+         }
+         @media screen and (max-width: 580px) {
+         #nescss > .container {
+         margin-top: 190px;
+         }
+         }
+      </style>
+<script type="text/javascript">
+         if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+           window.alert('IE is not supported on this page.')
+         }
+         
+      </script>
+</head>
+<body style>
+<div id="nescss">
+<header :class="{ sticky: scrollPos &gt; 50 }">
+<div class="container">
+<div class="nav-brand">
+<h1>
+Rıza Sabuncu
+</h1>
+<p>Offensive Security Engineer @ Trendyol</p>
+</div>
+<div class="social-buttons">
+<div class="share">
+<a href="https://twitter.com/rizasabuncu" target="_blank"><i class="nes-icon twitter"></i></a>
+<a href="https://facebook.com/rizasabuncuu" target="_blank"><i class="nes-icon facebook"></i></a>
+<a href="https://www.linkedin.com/in/rizasabuncu/" target="_blank"><i class="nes-icon linkedin"></i></a>
+<a href="https://instagram.com/rizasabuncu" target="_blank"><i class="nes-icon instagram"></i></a>
+<a href="https://github.com/riza" target="_blank"><i class="nes-icon github"></i></a>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<main class="main-content">
+<section class="showcase">
+<section class="nes-container with-title">
+<h3 class="title">Experience</h3>
+<div id="containers" class="item">
+<div class="nes-container with-title">
+<p class="title">
+<a href="https://trendyol.com/" target="_blank" rel="nofollow">TRENDYOL (Current)</a>
+</p>
+<p>
+In Offensive Security team, we work on topics such as Preparation & Analysis, Intelligence, Identification, Exploitation, Communication, Monitoring & Maintenance, and Automation.
+</p>
+</div>
+<div class="nes-container with-title is-dark">
+<p class="title">
+<a href="https://masomo.com/" target="_blank" rel="nofollow">MASOMO</a>
+</p>
+<p>
+I have developed some of the tools to be used in the company and the features in the Basketball Arena game.
+</p>
+</div>
+<div class="nes-container with-title">
+<p class="title">
+<a href="https://yuex.com/" target="_blank" rel="nofollow">YUEX</a>
+</p>
+<p>
+Developed some microservices with Golang for a cryptocurrency exchange platform.
+</p>
+</div>
+<div class="nes-container is-dark with-title">
+<p class="title">
+<a href="https://www.troodon.com.tr/" target="_blank" rel="nofollow">TROODON</a>
+</p>
+<p>
+I played a role in the development and improvement of various mobile applications.
+</p>
+</div>
+<div class="nes-container with-title">
+<p class="title">
+<a href="https://www.troodon.com.tr/" target="_blank" rel="nofollow">35LAB</a>
+</p>
+<p>
+I have developed various web applications and e-commerce platforms using Symfony.
+</p>
+</div>
+</div>
+</section>
+</section>
+</main>
+<footer>
+<p>
+<span class="year">2023</span>
+<a href="https://twitter.com/rizasabuncu" target="_blank" rel="unfollow">Rıza Sabuncu</a>
+</p>
+</footer>
+</div>
+</div>
+<script type="text/javascript">
+	document.querySelectorAll('.year').forEach(el => {
+  		el.textContent = "© " + new Date().getFullYear();
+	});
+
+	
+	//mini xss challenge
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    var param = getUrlParameter('name');
+    var name = atob(param);
+    document.getElementById("name").innerHTML = name;
+      </script>
+<span id="name"></span>
+</body>
+</html>
